@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="map2Pawn/map2Pawn.vcxproj" Id="aaa3e893-21a8-4b3d-a7a6-20cd55e698bf" />
+</Solution>
