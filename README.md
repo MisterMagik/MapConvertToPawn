@@ -9,7 +9,7 @@ Convert object function to Pawn code.
 1. Open the Map Editor and create your custom map.
 1. Once you have finished creating your map, save it and export it as a .map file.
 1. Run the MapConverterToPawn tool and select your .map file.
-1. The tool will process the .map file and generate the corresponding Pawn code for the RemoveBuilding function.
+1. The tool will process the .map file and generate the corresponding Pawn code for the RemoveBuilding and CreateObject function.
 1. Copy the generated Pawn code and paste it into your SA-MP server script where you want to remove the building.
 1. Compile your SA-MP server script and test it to see the changes in your custom map.
 
