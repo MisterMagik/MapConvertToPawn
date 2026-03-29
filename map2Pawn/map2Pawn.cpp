@@ -50,11 +50,11 @@ int main(int argc, char* argv[]) {
 
    
 
-    // Naglowek w pliku wyjsciowym
+  
     outputFile << "// Wygenerowane RemoveBuildingForPlayer z pliku " << inputFileName << "\n";
 
     while (std::getline(inputFile, line)) {
-        // Szukamy tylko linii zawierajacych removeWorldObject
+       
         if (line.find("<removeWorldObject") != std::string::npos) {
             std::string model = getAttributeValue(line, "model");
             std::string radius = getAttributeValue(line, "radius");
@@ -70,6 +70,33 @@ int main(int argc, char* argv[]) {
                     << posY << ", "
                     << posZ << ", "
                     << radius << ");\n";
+                count++;
+            }
+        }
+        if (line.find("<object") != std::string::npos) {
+            std::string model = getAttributeValue(line, "model");
+            std::string radius = getAttributeValue(line, "radius");
+			std::string dimension = getAttributeValue(line, "dimension");
+			std::string interior = getAttributeValue(line, "interior");
+            std::string posX = getAttributeValue(line, "posX");
+            std::string posY = getAttributeValue(line, "posY");
+            std::string posZ = getAttributeValue(line, "posZ");
+			std::string rotX = getAttributeValue(line, "rotX");
+			std::string rotY = getAttributeValue(line, "rotY");
+			std::string rotZ = getAttributeValue(line, "rotZ");
+
+
+            // Jesli udalo sie znalezc wszystkie potrzebne dane
+            if (!model.empty() && !radius.empty() && !posX.empty() && !posY.empty() && !posZ.empty()) {
+                outputFile << "CreateObject("
+                    << model << ", "
+                    << posX << ", "
+                    << posY << ", "
+                    << posZ << ", "
+					<< rotX << ", "
+					<< rotY << ", "
+					<< rotZ << ", "
+                    <<");\n";
                 count++;
             }
         }
