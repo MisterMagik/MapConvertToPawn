@@ -3,6 +3,7 @@ A tool to convert maps from the Map Editor to Pawn code for use in SA-MP (San An
 
 # Features
 Convert RemoveBuilding function to Pawn code.
+Convert object function to Pawn code. 
 
 # Usage
 1. Open the Map Editor and create your custom map.
