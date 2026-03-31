@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 	int createdCounter = 0;
 
 	std::cout << "MtaMapToPawn - Konwerter mapy z mta do formatu Pawn\n";
-	std::cout << "Narzedzie do konwersji obiektow z pliku mapy MTA do funkcji RemoveBuildingForPlayer\n";
+	std::cout << "Narzedzie do konwersji obiektow z pliku mapy MTA do funkcji SA:MP\n";
     std::cout << "Autor: MisterMagik\n";
     std::cout << "Wykonano dla Old School RolePlay\n";
     if (argc < 2) {
