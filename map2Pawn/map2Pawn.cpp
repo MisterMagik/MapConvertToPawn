@@ -18,6 +18,8 @@ std::string getAttributeValue(const std::string& line, const std::string& attrib
 int main(int argc, char* argv[]) {
     std::string line;
     int count = 0;
+    int removedCounter = 0;
+	int createdCounter = 0;
 
 	std::cout << "MtaMapToPawn - Konwerter mapy z mta do formatu Pawn\n";
 	std::cout << "Narzedzie do konwersji obiektow z pliku mapy MTA do funkcji RemoveBuildingForPlayer\n";
@@ -71,6 +73,7 @@ int main(int argc, char* argv[]) {
                     << posZ << ", "
                     << radius << ");\n";
                 count++;
+				removedCounter++;
             }
         }
         if (line.find("<object") != std::string::npos) {
@@ -98,6 +101,7 @@ int main(int argc, char* argv[]) {
 					<< rotZ << ", "
                     <<");\n";
                 count++;
+                createdCounter++;
             }
         }
     }
@@ -105,7 +109,7 @@ int main(int argc, char* argv[]) {
     inputFile.close();
     outputFile.close();
 
-    std::cout << "Zakonczono sukcesem! Przetworzono " << count << " obiektow." << std::endl;
+    std::cout << "Zakonczono sukcesem! Przetworzono " << count << " obiektow." << " Stworzono" << createdCounter << " obiektow." << "Usunieto " << removedCounter << " obiektow." << std::endl;
     std::getchar();
 
     return 0;
