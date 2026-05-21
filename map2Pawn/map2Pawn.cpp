@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
     outputFileName += ".pwn";
 
 	std::cerr << "Wczytywanie pliku: " << outputFileName << std::endl;
-    return 0;
+    
     std::ifstream inputFile(inputFileName);
     std::ofstream outputFile(outputFileName);
 
